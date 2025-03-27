@@ -445,5 +445,151 @@ menu: nav/home.html
                 paragraphs.forEach(p => p.classList.remove('bg-yellow-100'));
             }
         });
+
+        // Font Size Controls
+        const increaseFontButton = document.getElementById('increase-font');
+        const decreaseFontButton = document.getElementById('decrease-font');
+        const resetFontButton = document.getElementById('reset-font');
+        let currentFontSize = 16; // Default font size
+        const minFontSize = 12;
+        const maxFontSize = 24;
+        const fontSizeStep = 2;
+
+        function updateFontSize() {
+            document.documentElement.style.fontSize = `${currentFontSize}px`;
+            // Update transcript paragraphs
+            const paragraphs = document.querySelectorAll('#transcript-content p');
+            paragraphs.forEach(p => {
+                p.style.fontSize = `${currentFontSize}px`;
+            });
+            // Store preference
+            localStorage.setItem('fontSize', currentFontSize);
+        }
+
+        increaseFontButton.addEventListener('click', function() {
+            if (currentFontSize < maxFontSize) {
+                currentFontSize += fontSizeStep;
+                updateFontSize();
+            }
+        });
+
+        decreaseFontButton.addEventListener('click', function() {
+            if (currentFontSize > minFontSize) {
+                currentFontSize -= fontSizeStep;
+                updateFontSize();
+            }
+        });
+
+        resetFontButton.addEventListener('click', function() {
+            currentFontSize = 16;
+            updateFontSize();
+        });
+
+        // High Contrast Mode
+        const highContrastButton = document.getElementById('high-contrast');
+        let isHighContrast = false;
+
+        function toggleHighContrast() {
+            isHighContrast = !isHighContrast;
+            document.body.classList.toggle('high-contrast');
+            
+            // Update button appearance
+            highContrastButton.classList.toggle('active');
+            if (isHighContrast) {
+                highContrastButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                highContrastButton.classList.add('bg-green-500', 'hover:bg-green-600');
+            } else {
+                highContrastButton.classList.remove('bg-green-500', 'hover:bg-green-600');
+                highContrastButton.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
+            }
+
+            // Store preference
+            localStorage.setItem('highContrast', isHighContrast);
+        }
+
+        highContrastButton.addEventListener('click', toggleHighContrast);
+
+        // Load saved preferences
+        function loadPreferences() {
+            // Load font size
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                currentFontSize = parseInt(savedFontSize);
+                updateFontSize();
+            }
+
+            // Load high contrast mode
+            const savedHighContrast = localStorage.getItem('highContrast');
+            if (savedHighContrast === 'true') {
+                isHighContrast = true;
+                document.body.classList.add('high-contrast');
+                highContrastButton.classList.add('active');
+                highContrastButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                highContrastButton.classList.add('bg-green-500', 'hover:bg-green-600');
+            }
+        }
+
+        // Add high contrast styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .high-contrast {
+                --bg-primary: #000000;
+                --text-primary: #ffffff;
+                --bg-secondary: #1a1a1a;
+                --text-secondary: #ffffff;
+                --accent-color: #ffff00;
+            }
+
+            .high-contrast .bg-white {
+                background-color: var(--bg-secondary) !important;
+            }
+
+            .high-contrast .text-gray-700,
+            .high-contrast .text-gray-500,
+            .high-contrast .text-gray-600 {
+                color: var(--text-secondary) !important;
+            }
+
+            .high-contrast .bg-indigo-600 {
+                background-color: var(--accent-color) !important;
+            }
+
+            .high-contrast .hover\:bg-indigo-700:hover {
+                background-color: #e6e600 !important;
+            }
+
+            .high-contrast .bg-yellow-100 {
+                background-color: #ffff00 !important;
+                color: #000000 !important;
+            }
+
+            .high-contrast .bg-gray-100 {
+                background-color: #1a1a1a !important;
+            }
+
+            .high-contrast .bg-gray-200 {
+                background-color: #333333 !important;
+            }
+
+            .high-contrast .hover\:bg-gray-300:hover {
+                background-color: #4d4d4d !important;
+            }
+
+            .high-contrast .bg-gray-300 {
+                background-color: #4d4d4d !important;
+            }
+
+            .high-contrast .text-white {
+                color: #000000 !important;
+            }
+
+            .high-contrast .hover\:text-indigo-700:hover {
+                color: #000000 !important;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Load preferences when page loads
+        loadPreferences();
     });
 </script> 
