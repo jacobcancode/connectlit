@@ -1,6 +1,5 @@
 ---
 layout: base
-title: BookConnect - Books & Reading Assistance
 search_exclude: true
 menu: nav/home.html
 ---
