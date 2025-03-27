@@ -235,6 +235,8 @@ menu: nav/home.html
         const audioPlayer = new Audio();
         let isPlaying = false;
         let currentBook = null;
+        let currentTranscript = null;
+        let isHighlighting = false;
         
         // Player Modal Functionality
         const listenButtons = document.querySelectorAll('.listen-button');
@@ -242,6 +244,21 @@ menu: nav/home.html
         const closePlayer = document.getElementById('close-player');
         const playerTitle = document.getElementById('player-title');
         const playerCover = document.getElementById('player-cover');
+        
+        // Sample transcript data (in a real app, this would come from the backend)
+        const transcripts = {
+            'The Women': [
+                "Women can be heroes. When twenty-year-old nursing student Frances 'Frankie' McGrath hears these words, it is a revelation.",
+                "Raised in the sun-drenched, idyllic world of Southern California and sheltered by her conservative parents, she has always prided herself on doing the right thing.",
+                "But in 1965, the world is changing, and she suddenly dares to imagine a different future for herself."
+            ],
+            'The God of the Woods': [
+                "Early morning, August 1975: a camp counselor discovers an empty bunk.",
+                "Its occupant, Barbara Van Laar, has gone missing.",
+                "Barbara isn't just any thirteen-year-old: she's the daughter of the family that owns the summer camp and employs most of the region's residents."
+            ],
+            // Add more transcripts for other books...
+        };
         
         listenButtons.forEach(button => {
             button.addEventListener('click', function() {
@@ -254,6 +271,10 @@ menu: nav/home.html
                 playerCover.src = coverSrc;
                 audioPlayer.src = audioSrc;
                 currentBook = audioCard;
+                currentTranscript = transcripts[title] || [];
+                
+                // Update transcript content
+                updateTranscriptContent(currentTranscript);
                 
                 playerModal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
@@ -265,6 +286,13 @@ menu: nav/home.html
                 updatePlayPauseButton();
             });
         });
+        
+        function updateTranscriptContent(transcript) {
+            const transcriptContent = document.getElementById('transcript-content');
+            transcriptContent.innerHTML = transcript.map((text, index) => `
+                <p id="transcript-paragraph-${index + 1}" class="mb-3">${text}</p>
+            `).join('');
+        }
         
         // Playback controls
         const playPauseButton = document.getElementById('play-pause');
@@ -301,7 +329,27 @@ menu: nav/home.html
             const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
             progressBar.style.width = `${progress}%`;
             currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+            
+            // Update transcript highlighting if enabled
+            if (isHighlighting && currentTranscript) {
+                updateTranscriptHighlight(progress);
+            }
         });
+        
+        function updateTranscriptHighlight(progress) {
+            const paragraphs = document.querySelectorAll('#transcript-content p');
+            const paragraphCount = paragraphs.length;
+            const currentParagraph = Math.floor((progress / 100) * paragraphCount);
+            
+            paragraphs.forEach((p, index) => {
+                if (index === currentParagraph) {
+                    p.classList.add('bg-yellow-100');
+                    p.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    p.classList.remove('bg-yellow-100');
+                }
+            });
+        }
         
         playPauseButton.addEventListener('click', function() {
             if (isPlaying) {
@@ -327,6 +375,10 @@ menu: nav/home.html
             audioPlayer.pause();
             isPlaying = false;
             updatePlayPauseButton();
+            // Reset highlighting
+            isHighlighting = false;
+            document.getElementById('highlight-narration').classList.remove('active', 'bg-green-500', 'hover:bg-green-600');
+            document.getElementById('highlight-narration').classList.add('bg-indigo-600', 'hover:bg-indigo-700');
         });
         
         // Volume Adjustment
@@ -376,10 +428,15 @@ menu: nav/home.html
         const highlightNarrationButton = document.getElementById('highlight-narration');
         
         highlightNarrationButton.addEventListener('click', function() {
+            isHighlighting = !isHighlighting;
             this.classList.toggle('active');
             if (this.classList.contains('active')) {
                 this.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
                 this.classList.add('bg-green-500', 'hover:bg-green-600');
+                // Start highlighting from current position
+                if (currentTranscript) {
+                    updateTranscriptHighlight((audioPlayer.currentTime / audioPlayer.duration) * 100);
+                }
             } else {
                 this.classList.remove('bg-green-500', 'hover:bg-green-600');
                 this.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
