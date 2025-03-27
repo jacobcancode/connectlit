@@ -96,7 +96,9 @@ menu: nav/home.html
 
     <!-- Our Mission Section -->
     <section id="mission" class="h-screen flex flex-col items-center justify-center text-center bg-gray-200">
-        <img src="{{site.baseurl}}/images/dyslexia-font.jpg" alt="Dyslexia-Friendly Reading" class="h-96 w-auto rounded-lg shadow-xl fade-in">
+        <div class="text-9xl font-black text-indigo-600 tracking-tight mb-8 fade-in" style="font-family: 'Playfair Display', serif;">
+            BookConnect
+        </div>
         <h3 class="text-6xl font-bold mt-8 text-gray-900 fade-in">Our Mission</h3>
         <p class="text-3xl text-gray-700 mt-4 max-w-5xl fade-in">
             At BookConnect, we strive to create a community where book lovers can discover, share, and discuss their favorite reads. Our platform offers assistive technologies to help readers of all abilities enjoy books and enhance comprehension.
