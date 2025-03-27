@@ -229,8 +229,137 @@ menu: nav/home.html
     </div>
 </div>
 
+<!-- Add Loading Indicator -->
+<div id="loading-indicator" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-4 rounded-lg shadow-lg">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto"></div>
+        <p class="mt-4 text-gray-700">Loading...</p>
+    </div>
+</div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // API Configuration
+        const API_BASE_URL = 'http://localhost:5000/api';
+        let audiobooks = [];
+        let currentBook = null;
+        let isPlaying = false;
+        let currentTranscript = null;
+        let isHighlighting = false;
+        let isLoading = false;
+
+        // Loading State Management
+        function setLoading(loading) {
+            isLoading = loading;
+            const loadingIndicator = document.getElementById('loading-indicator');
+            if (loading) {
+                loadingIndicator.classList.remove('hidden');
+            } else {
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+
+        // Fetch Audiobooks
+        async function fetchAudiobooks() {
+            try {
+                setLoading(true);
+                const response = await fetch(`${API_BASE_URL}/audiobooks`);
+                if (!response.ok) throw new Error('Failed to fetch audiobooks');
+                audiobooks = await response.json();
+                renderAudiobooks();
+            } catch (error) {
+                console.error('Error fetching audiobooks:', error);
+                // Show error message to user
+                alert('Failed to load audiobooks. Please try again later.');
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        // Render Audiobooks
+        function renderAudiobooks() {
+            const container = document.querySelector('.grid');
+            container.innerHTML = audiobooks.map(book => `
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden audiobook-card">
+                    <img src="${book.coverImage}" alt="${book.title}" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">${book.title}</h3>
+                        <p class="text-gray-500 mb-2">by ${book.author}, narrated by ${book.narrator}</p>
+                        <p class="text-gray-700 mb-4">${book.description}</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-gray-600 mr-2">${formatDuration(book.duration)}</span>
+                                <div class="h-2 w-24 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg" data-audio="${book.audioUrl}">Listen</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Reattach event listeners
+            attachListenButtons();
+        }
+
+        // Format Duration
+        function formatDuration(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            return `${hours}h ${minutes}m`;
+        }
+
+        // Attach Listen Button Events
+        function attachListenButtons() {
+            const listenButtons = document.querySelectorAll('.listen-button');
+            listenButtons.forEach(button => {
+                button.addEventListener('click', async function() {
+                    const audioCard = this.closest('.audiobook-card');
+                    const title = audioCard.querySelector('h3').textContent;
+                    const book = audiobooks.find(b => b.title === title);
+                    
+                    if (!book) return;
+
+                    try {
+                        setLoading(true);
+                        // Fetch transcript
+                        const transcriptResponse = await fetch(`${API_BASE_URL}/audiobooks/${book.id}/transcript`);
+                        if (!transcriptResponse.ok) throw new Error('Failed to fetch transcript');
+                        const transcript = await transcriptResponse.json();
+
+                        // Update player
+                        playerTitle.textContent = title;
+                        playerCover.src = book.coverImage;
+                        audioPlayer.src = `${API_BASE_URL}/audiobooks/${book.id}/audio`;
+                        currentBook = book;
+                        currentTranscript = transcript;
+                        
+                        // Update transcript content
+                        updateTranscriptContent(transcript);
+                        
+                        // Show player
+                        playerModal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                        
+                        // Reset progress
+                        document.getElementById('progress-bar').style.width = '0%';
+                        document.getElementById('current-time').textContent = '0:00';
+                        isPlaying = false;
+                        updatePlayPauseButton();
+                    } catch (error) {
+                        console.error('Error loading audiobook:', error);
+                        alert('Failed to load audiobook. Please try again later.');
+                    } finally {
+                        setLoading(false);
+                    }
+                });
+            });
+        }
+
+        // Initialize
+        fetchAudiobooks();
+
         // Audio Player Setup
         const audioPlayer = new Audio();
         let isPlaying = false;
@@ -259,33 +388,6 @@ menu: nav/home.html
             ],
             // Add more transcripts for other books...
         };
-        
-        listenButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const audioCard = this.closest('.audiobook-card');
-                const title = audioCard.querySelector('h3').textContent;
-                const coverSrc = audioCard.querySelector('img').src;
-                const audioSrc = this.dataset.audio;
-                
-                playerTitle.textContent = title;
-                playerCover.src = coverSrc;
-                audioPlayer.src = audioSrc;
-                currentBook = audioCard;
-                currentTranscript = transcripts[title] || [];
-                
-                // Update transcript content
-                updateTranscriptContent(currentTranscript);
-                
-                playerModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-                
-                // Reset progress
-                document.getElementById('progress-bar').style.width = '0%';
-                document.getElementById('current-time').textContent = '0:00';
-                isPlaying = false;
-                updatePlayPauseButton();
-            });
-        });
         
         function updateTranscriptContent(transcript) {
             const transcriptContent = document.getElementById('transcript-content');
