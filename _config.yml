@@ -1,9 +1,9 @@
-title: MediPulse
-description: "Palomar Social Media Optimization"
+title: BookConnect
+description: "A social platform for book lovers with reading assistive technologies"
 owner_name: Gavin Copley
 github_username: GavinCopley
-github_repo: "Palomar-MediPulse"
-baseurl: "/Palomar-MediPulse"
+github_repo: "connectlit"
+baseurl: "/connectlit"
 future: true
 remote_theme: jekyll/minima
 minima:

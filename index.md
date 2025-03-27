@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Flocker Social Media Site
+title: BookConnect - Books & Reading Assistance
 search_exclude: true
 menu: nav/home.html
 ---
@@ -44,8 +44,8 @@ menu: nav/home.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediPulse</title>
-    <script src="https://cdn.tailwingidcss.com"></script>
+    <title>BookConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Fade-in animation */
         .fade-in {
@@ -53,11 +53,11 @@ menu: nav/home.html
             transform: translateY(40px);
             transition: opacity 1s ease-out, transform 1s ease-out;
         }
-  .fade-in.visible {
+        .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
- /* Gradient Animation */
+        /* Gradient Animation */
         @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -67,206 +67,225 @@ menu: nav/home.html
             background-size: 200% 200%;
             animation: gradient 10s ease infinite;
         }
- </style>
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900 relative">
 
- <!-- Background Animation -->
-<div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        <div class="bg-gradient-to-r from-gray-900 via-gray-800 to-black w-full h-full opacity-50 animate-gradient"></div>
+    <!-- Background Animation -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+        <div class="bg-gradient-to-r from-indigo-900 via-purple-800 to-blue-900 w-full h-full opacity-50 animate-gradient"></div>
     </div>
 
-<!-- Welcome Section -->
- <section id="welcome" class="h-screen flex items-center justify-center text-center bg-gray-900 text-white">
+    <!-- Welcome Section -->
+    <section id="welcome" class="h-screen flex items-center justify-center text-center bg-gray-900 text-white">
         <h1 class="text-8xl font-extrabold fade-in">
-            Welcome to <span class="text-indigo-500">MediPulse</span>
+            Welcome to <span class="text-indigo-500">BookConnect</span>
         </h1>
     </section>
 
-<!-- About Us Section -->
-<section id="about" class="h-screen flex flex-col items-center justify-center text-center">
+    <!-- About Us Section -->
+    <section id="about" class="h-screen flex flex-col items-center justify-center text-center">
         <h2 class="text-7xl font-extrabold text-indigo-500 fade-in mb-6">About Us</h2>
         <p class="text-3xl text-gray-700 max-w-5xl fade-in">
-            MediPulse is your next social media platform
+            BookConnect is a social platform for book lovers with reading assistive technologies to enhance your reading experience
         </p>
     </section>
 
-<!-- Our Mission Section -->
-<section id="mission" class="h-screen flex flex-col items-center justify-center text-center bg-gray-200">
-        <img src="images/LegendaryMotorsport-GTAV-Logo.png"
-            alt="Legendary Motorsport Logo"
+    <!-- Our Mission Section -->
+    <section id="mission" class="h-screen flex flex-col items-center justify-center text-center bg-gray-200">
+        <img src="images/book-logo.png"
+            alt="BookConnect Logo"
             class="h-96 w-auto fade-in">
         <h3 class="text-6xl font-bold mt-8 text-gray-900 fade-in">Our Mission</h3>
         <p class="text-3xl text-gray-700 mt-4 max-w-5xl fade-in">
-            At MediPulse, we strive to create a community where social media lovers can collaborate, share, and support each other. From analyzing posts to providing improvements to your social media posts.
+            At BookConnect, we strive to create a community where book lovers can discover, share, and discuss their favorite reads. Our platform offers assistive technologies to help readers of all abilities enjoy books and enhance comprehension.
         </p>
     </section>
 
- <!-- Featured Cars Section -->
- <section id="featured-cars" class="py-20 bg-gray-100">
-        <h2 class="text-7xl font-bold text-center text-red-600 mb-10 fade-in">Featured Cars</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a href="{{site.baseurl}}/gas" class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
-                    <img src="images/resized-enshot20240607080120png.png" alt="Gas Car" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-3xl font-bold mb-2">Gas Car</h3>
-                        <p class="text-xl text-gray-700">The timeless classic fueled by gasoline, offering reliability and power.</p>
-                    </div>
-                </a>
-                <a href="{{site.baseurl}}/electric" class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
-                    <img src="https://blog.vipautoaccessories.com/wp-content/uploads/2024/08/2024_Super-Chrome-Red-Gloss-Wrap_0Hero2.jpg" alt="Electric Car" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-3xl font-bold mb-2">Electric Car</h3>
-                        <p class="text-xl text-gray-700">Maximum efficiency and eco-friendliness, quick acceleration and futuristic design.</p>
-                    </div>
-                </a>
-                <a href="{{site.baseurl}}/dream-car" class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
-                    <img src="images/964355023c8621887c37e1fcc3c1dc3aa9-koeniggsegg-one1.2x.h473.w710.png" alt="Dream Car" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-3xl font-bold mb-2">Dream Car</h3>
-                        <p class="text-xl text-gray-700">A hypercar designed for the ultimate driving experience.</p>
-                    </div>
-                </a>
-            </div>
+    <!-- Featured Books Section -->
+    <section id="featured-books" class="py-20 bg-gray-100">
+        <h2 class="text-7xl font-bold text-center text-indigo-600 mb-10 fade-in">Featured Books</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="{{site.baseurl}}/fiction" class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
+                <img src="images/fiction-books.jpg" alt="Fiction Books" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-3xl font-bold mb-2">Fiction Books</h3>
+                    <p class="text-xl text-gray-700">Explore worlds of imagination through our curated fiction collection.</p>
+                </div>
+            </a>
+            <a href="{{site.baseurl}}/non-fiction" class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
+                <img src="images/non-fiction-books.jpg" alt="Non-Fiction Books" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-3xl font-bold mb-2">Non-Fiction Books</h3>
+                    <p class="text-xl text-gray-700">Discover knowledge and insights from our collection of non-fiction books.</p>
+                </div>
+            </a>
+            <a href="{{site.baseurl}}/audiobooks" class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
+                <img src="images/audiobooks.jpg" alt="Audiobooks" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-3xl font-bold mb-2">Audiobooks</h3>
+                    <p class="text-xl text-gray-700">Listen to professionally narrated books for an immersive experience.</p>
+                </div>
+            </a>
+        </div>
     </section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="py-20 bg-gray-900 text-white overflow-hidden">
-    <h2 class="text-7xl font-bold text-center mb-10 fade-in">What Our Users Say</h2>
-    <div class="relative">
-        <div class="flex space-x-8 w-max animate-scroll">
-            <!-- Original Testimonials -->
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "MediPulse is the<br>
-                    best platform for phone enthusiasts!<br>
-                    I've learned so much<br>
-                    and connected with amazing people."
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Alex R.</h3>
+    <!-- Assistive Technologies Section -->
+    <section id="assistive-tech" class="py-20 bg-gray-800 text-white">
+        <h2 class="text-7xl font-bold text-center mb-10 fade-in">Reading Assistive Technologies</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+            <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform transition-transform duration-500 hover:scale-105">
+                <h3 class="text-3xl font-bold mb-4 text-indigo-300">Text-to-Speech</h3>
+                <p class="text-xl">Our advanced text-to-speech technology converts written text to natural-sounding speech, helping readers with visual impairments or learning disabilities.</p>
             </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "A fantastic community where<br>
-                    I can share my photography<br>
-                    and get great feedback."
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Jamie T.</h3>
+            <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform transition-transform duration-500 hover:scale-105">
+                <h3 class="text-3xl font-bold mb-4 text-indigo-300">Dyslexia-Friendly Font</h3>
+                <p class="text-xl">Our platform offers OpenDyslexic and other specialized fonts designed to increase readability for readers with dyslexia.</p>
             </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "The forums have been super helpful<br>
-                    for troubleshooting problems.<br>
-                    Highly recommended!"
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Chris M.</h3>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "I’ve found my dream platform<br>
-                    thanks to the resources<br>
-                    on this platform.<br>
-                    Amazing work!"
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Taylor L.</h3>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "This community has been incredible<br>
-                    for finding advice on social media posts."
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Morgan S.</h3>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "Every phone lover needs to join<br>
-                    MediPulse.<br>
-                    It’s a game-changer."
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Riley D.</h3>
-            </div>
-            <!-- Duplicate Testimonials for Infinite Scroll -->
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "MediPulse is the<br>
-                    best platform for phone adicts!<br>
-                    I've learned so much<br>
-                    and connected with amazing people."
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Alex R.</h3>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "A fantastic community where<br>
-                    I can share my social media photography<br>
-                    and get great feedback."
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Jamie T.</h3>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "The forums have been super helpful<br>
-                    for troubleshooting social problems.<br>
-                    Highly recommended!"
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Chris M.</h3>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "I’ve found my dream post<br>
-                    thanks to the resources<br>
-                    on this platform.<br>
-                    Amazing work!"
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Taylor L.</h3>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "This website is tuff<br>
-                    lowk recomend."
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Morgan S.</h3>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
-                <p class="text-3xl italic leading-relaxed">
-                    "Every social media lover needs to join<br>
-                    MediPulse.<br>
-                    It’s a game-changer."
-                </p>
-                <h3 class="mt-6 font-bold text-xl">- Riley D.</h3>
+            <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform transition-transform duration-500 hover:scale-105">
+                <h3 class="text-3xl font-bold mb-4 text-indigo-300">Reading Comprehension Tools</h3>
+                <p class="text-xl">Integrated dictionary, vocabulary builders, and AI-powered summaries help improve reading comprehension for all readers.</p>
             </div>
         </div>
-    </div>
-</section>
-<style>
-    @keyframes scroll {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-50%);
-        }
-    }
-    .animate-scroll {
-        animation: scroll 45s linear infinite;
-    }
-</style>
+    </section>
 
-<!-- Call-to-Action Section -->
-<section id="cta" class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-red-600 to-indigo-500 text-white">
-        <h2 class="text-7xl font-bold mb-6 fade-in">Join the MediPulse Community</h2>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-900 text-white overflow-hidden">
+        <h2 class="text-7xl font-bold text-center mb-10 fade-in">What Our Users Say</h2>
+        <div class="relative">
+            <div class="flex space-x-8 w-max animate-scroll">
+                <!-- Original Testimonials -->
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "BookConnect is the<br>
+                        best platform for book lovers!<br>
+                        The text-to-speech feature<br>
+                        has transformed my reading experience."
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Alex R.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "A fantastic community where<br>
+                        I can share my book reviews<br>
+                        and get great recommendations."
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Jamie T.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "The dyslexia-friendly font option<br>
+                        has made reading enjoyable again.<br>
+                        Highly recommended!"
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Chris M.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "I've found my reading community<br>
+                        thanks to the discussion forums<br>
+                        on this platform.<br>
+                        Amazing work!"
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Taylor L.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "The AI-powered summaries helped me<br>
+                        better understand complex books."
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Morgan S.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "Every book lover needs to join<br>
+                        BookConnect.<br>
+                        It's a game-changer."
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Riley D.</h3>
+                </div>
+                <!-- Duplicate Testimonials for Infinite Scroll -->
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "BookConnect is the<br>
+                        best platform for avid readers!<br>
+                        I've discovered so many new authors<br>
+                        through community recommendations."
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Alex R.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "A fantastic community where<br>
+                        I can share my literary photography<br>
+                        and get great feedback."
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Jamie T.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "The forums have been super helpful<br>
+                        for discussing plot mysteries.<br>
+                        Highly recommended!"
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Chris M.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "I've found my reading motivation<br>
+                        thanks to the reading challenges<br>
+                        on this platform.<br>
+                        Amazing work!"
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Taylor L.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "This website is excellent<br>
+                        highly recommend to all book lovers."
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Morgan S.</h3>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-lg min-w-[300px] min-h-[350px] flex flex-col justify-between">
+                    <p class="text-3xl italic leading-relaxed">
+                        "Every book enthusiast needs to join<br>
+                        BookConnect.<br>
+                        It's revolutionized my reading habits."
+                    </p>
+                    <h3 class="mt-6 font-bold text-xl">- Riley D.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        .animate-scroll {
+            animation: scroll 45s linear infinite;
+        }
+    </style>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta" class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-500 text-white">
+        <h2 class="text-7xl font-bold mb-6 fade-in">Join the BookConnect Community</h2>
         <p class="text-3xl max-w-4xl text-center mb-8 fade-in">
-            Connect with phone enthusiasts from around the world, share your experiences, and explore amazing content about cars!
+            Connect with book enthusiasts from around the world, share your reading experiences, and explore our reading assistive technologies!
         </p>
-        <a href="{{site.baseurl}}/signup" class="bg-white text-red-600 text-3xl px-8 py-4 rounded-lg shadow-lg font-bold transition-transform transform hover:scale-110 fade-in">
+        <a href="{{site.baseurl}}/signup" class="bg-white text-indigo-600 text-3xl px-8 py-4 rounded-lg shadow-lg font-bold transition-transform transform hover:scale-110 fade-in">
             Get Started Now
         </a>
     </section>
 
- <!-- Footer -->
-<footer class="bg-gray-800 text-white py-8">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto text-center">
-            <p class="text-lg">&copy; 2024 MediPulse. All rights reserved.</p>
+            <p class="text-lg">&copy; 2024 BookConnect. All rights reserved.</p>
             <div class="mt-4">
                 <a href="#" class="text-gray-400 hover:text-white mx-2">Facebook</a>
                 <a href="#" class="text-gray-400 hover:text-white mx-2">Twitter</a>
@@ -275,9 +294,8 @@ menu: nav/home.html
         </div>
     </footer>
 
- <!-- JavaScript -->
-
- <script>
+    <!-- JavaScript -->
+    <script>
         // JavaScript to handle fade-in effect on scroll
         const fadeInElements = document.querySelectorAll('.fade-in');
 
