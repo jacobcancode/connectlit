@@ -54,11 +54,11 @@ menu: nav/home.html
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Book 1 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/fiction-book1.jpg" alt="The Night Travelers" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705614870i/196833291.jpg" alt="The Women" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Night Travelers</h3>
-                    <p class="text-gray-500 mb-2">by Rebecca Solnit</p>
-                    <p class="text-gray-700 mb-4">A captivating tale of mystery and adventure that follows a group of travelers on a journey through a magical world that only appears at night.</p>
+                    <h3 class="text-2xl font-bold mb-2">The Women</h3>
+                    <p class="text-gray-500 mb-2">by Kristin Hannah</p>
+                    <p class="text-gray-700 mb-4">A powerful story of one woman's journey as an Army nurse in Vietnam, exploring deep friendships, bold patriotism, and the challenges faced by women who served their country during a turbulent era.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -68,11 +68,11 @@ menu: nav/home.html
             
             <!-- Book 2 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/fiction-book2.jpg" alt="The Echo of Old Books" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1702324260i/199267675.jpg" alt="The God of the Woods" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Echo of Old Books</h3>
-                    <p class="text-gray-500 mb-2">by Barbara Davis</p>
-                    <p class="text-gray-700 mb-4">A rare book dealer discovers that some volumes hold more stories than those printed on their pages, including secrets about her own past.</p>
+                    <h3 class="text-2xl font-bold mb-2">The God of the Woods</h3>
+                    <p class="text-gray-500 mb-2">by Liz Moore</p>
+                    <p class="text-gray-700 mb-4">A gripping mystery set in 1975 about a teenager who vanishes from her Adirondack summer camp, unraveling family secrets and connecting to another disappearance fourteen years prior.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -82,11 +82,11 @@ menu: nav/home.html
             
             <!-- Book 3 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/fiction-book3.jpg" alt="The Invisible Library" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703554916i/75335801.jpg" alt="House of Flame and Shadow" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Invisible Library</h3>
-                    <p class="text-gray-500 mb-2">by Genevieve Cogman</p>
-                    <p class="text-gray-700 mb-4">Professional spy Irene works for a mysterious library that collects important fiction from different realities, stepping into a tangled web of danger.</p>
+                    <h3 class="text-2xl font-bold mb-2">House of Flame and Shadow</h3>
+                    <p class="text-gray-500 mb-2">by Sarah J. Maas</p>
+                    <p class="text-gray-700 mb-4">The stunning third book in the Crescent City series follows Bryce Quinlan as she fights to return to Midgard while Hunt Athalar struggles to escape the Asteri's control.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -96,11 +96,11 @@ menu: nav/home.html
             
             <!-- Book 4 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/fiction-book4.jpg" alt="The Starless Sea" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683919831i/61431922.jpg" alt="Fourth Wing" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Starless Sea</h3>
-                    <p class="text-gray-500 mb-2">by Erin Morgenstern</p>
-                    <p class="text-gray-700 mb-4">Graduate student Zachary discovers a mysterious book in the library that contains stories about himself, leading him to an ancient underground library.</p>
+                    <h3 class="text-2xl font-bold mb-2">Fourth Wing</h3>
+                    <p class="text-gray-500 mb-2">by Rebecca Yarros</p>
+                    <p class="text-gray-700 mb-4">Enter a world where dragon riders compete in a brutal war college, following twenty-year-old Violet Sorrengail as she fights for survival among the elite.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -110,11 +110,11 @@ menu: nav/home.html
             
             <!-- Book 5 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/fiction-book5.jpg" alt="The Book of Lost Names" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1693925132i/195275772.jpg" alt="Iron Flame" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Book of Lost Names</h3>
-                    <p class="text-gray-500 mb-2">by Kristin Harmel</p>
-                    <p class="text-gray-700 mb-4">A young woman helps Jewish children escape Nazi-occupied France by forging identity documents, secretly preserving their real names in a coded book.</p>
+                    <h3 class="text-2xl font-bold mb-2">Iron Flame</h3>
+                    <p class="text-gray-500 mb-2">by Rebecca Yarros</p>
+                    <p class="text-gray-700 mb-4">The sequel to Fourth Wing continues Violet's journey at Basgiath War College, where she must navigate new challenges, deeper secrets, and dangerous alliances.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -124,11 +124,11 @@ menu: nav/home.html
             
             <!-- Book 6 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/fiction-book6.jpg" alt="The Library of the Unwritten" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705614870i/196833291.jpg" alt="When the Moon Hatched" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Library of the Unwritten</h3>
-                    <p class="text-gray-500 mb-2">by A.J. Hackwith</p>
-                    <p class="text-gray-700 mb-4">The librarian of Hell's library must track down a missing character from an unfinished book who has escaped into the human world.</p>
+                    <h3 class="text-2xl font-bold mb-2">When the Moon Hatched</h3>
+                    <p class="text-gray-500 mb-2">by Sarah A. Parker</p>
+                    <p class="text-gray-700 mb-4">A fast-paced fantasy romance following Raeve, a rebel assassin, and Kaan Vaegor, a crown-wearing hunter, as they uncover ancient truths in a world where dragons became moons.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>

@@ -48,114 +48,114 @@ menu: nav/home.html
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Audiobook 1 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden audiobook-card">
-                <img src="images/audiobook1.jpg" alt="Project Hail Mary" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705614870i/196833291.jpg" alt="The Women" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Project Hail Mary</h3>
-                    <p class="text-gray-500 mb-2">by Andy Weir, narrated by Ray Porter</p>
-                    <p class="text-gray-700 mb-4">A lone astronaut must save the earth from disaster in this incredible adventure of ingenuity, discovery, and survival.</p>
+                    <h3 class="text-2xl font-bold mb-2">The Women</h3>
+                    <p class="text-gray-500 mb-2">by Kristin Hannah, narrated by Julia Whelan</p>
+                    <p class="text-gray-700 mb-4">A powerful story of one woman's journey as an Army nurse in Vietnam, exploring deep friendships, bold patriotism, and the challenges faced by women who served their country during a turbulent era.</p>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <span class="text-gray-600 mr-2">13h 24m</span>
+                            <span class="text-gray-600 mr-2">15h 12m</span>
                             <div class="h-2 w-24 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="h-full bg-indigo-600 rounded-full" style="width: 35%"></div>
+                                <div class="h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
                             </div>
                         </div>
-                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Listen</button>
+                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg" data-audio="https://www.audible.com/pd/The-Women-Audiobook/B0C9J5YQZP">Listen</button>
                     </div>
                 </div>
             </div>
             
             <!-- Audiobook 2 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden audiobook-card">
-                <img src="images/audiobook2.jpg" alt="Becoming" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1702324260i/199267675.jpg" alt="The God of the Woods" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Becoming</h3>
-                    <p class="text-gray-500 mb-2">by Michelle Obama, narrated by Michelle Obama</p>
-                    <p class="text-gray-700 mb-4">An intimate and inspiring memoir from the former First Lady of the United States.</p>
+                    <h3 class="text-2xl font-bold mb-2">The God of the Woods</h3>
+                    <p class="text-gray-500 mb-2">by Liz Moore, narrated by January LaVoy</p>
+                    <p class="text-gray-700 mb-4">A gripping mystery set in 1975 about a teenager who vanishes from her Adirondack summer camp, unraveling family secrets and connecting to another disappearance fourteen years prior.</p>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <span class="text-gray-600 mr-2">19h 3m</span>
+                            <span class="text-gray-600 mr-2">13h 45m</span>
                             <div class="h-2 w-24 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="h-full bg-indigo-600 rounded-full" style="width: 20%"></div>
+                                <div class="h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
                             </div>
                         </div>
-                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Listen</button>
+                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg" data-audio="https://www.audible.com/pd/The-God-of-the-Woods-Audiobook/B0C9J5YQZP">Listen</button>
                     </div>
                 </div>
             </div>
             
             <!-- Audiobook 3 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden audiobook-card">
-                <img src="images/audiobook3.jpg" alt="The Thursday Murder Club" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703554916i/75335801.jpg" alt="House of Flame and Shadow" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Thursday Murder Club</h3>
-                    <p class="text-gray-500 mb-2">by Richard Osman, narrated by Lesley Manville</p>
-                    <p class="text-gray-700 mb-4">Four septuagenarians with a few tricks up their sleeves meet weekly to solve unsolved crimes, until a real murder case unfolds.</p>
+                    <h3 class="text-2xl font-bold mb-2">House of Flame and Shadow</h3>
+                    <p class="text-gray-500 mb-2">by Sarah J. Maas, narrated by Elizabeth Evans</p>
+                    <p class="text-gray-700 mb-4">The stunning third book in the Crescent City series follows Bryce Quinlan as she fights to return to Midgard while Hunt Athalar struggles to escape the Asteri's control.</p>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <span class="text-gray-600 mr-2">12h 25m</span>
+                            <span class="text-gray-600 mr-2">25h 30m</span>
                             <div class="h-2 w-24 bg-gray-200 rounded-full overflow-hidden">
                                 <div class="h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
                             </div>
                         </div>
-                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Listen</button>
+                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg" data-audio="https://www.audible.com/pd/House-of-Flame-and-Shadow-Audiobook/B0C9J5YQZP">Listen</button>
                     </div>
                 </div>
             </div>
             
             <!-- Audiobook 4 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden audiobook-card">
-                <img src="images/audiobook4.jpg" alt="Dune" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683919831i/61431922.jpg" alt="Fourth Wing" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Dune</h3>
-                    <p class="text-gray-500 mb-2">by Frank Herbert, narrated by Scott Brick</p>
-                    <p class="text-gray-700 mb-4">Set on the desert planet Arrakis, this epic saga tells the story of the noble Atreides family and their battle for control of the most valuable resource in the universe.</p>
+                    <h3 class="text-2xl font-bold mb-2">Fourth Wing</h3>
+                    <p class="text-gray-500 mb-2">by Rebecca Yarros, narrated by Rebecca Soler</p>
+                    <p class="text-gray-700 mb-4">Enter a world where dragon riders compete in a brutal war college, following twenty-year-old Violet Sorrengail as she fights for survival among the elite.</p>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <span class="text-gray-600 mr-2">21h 2m</span>
+                            <span class="text-gray-600 mr-2">20h 45m</span>
                             <div class="h-2 w-24 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="h-full bg-indigo-600 rounded-full" style="width: 75%"></div>
+                                <div class="h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
                             </div>
                         </div>
-                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Listen</button>
+                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg" data-audio="https://www.audible.com/pd/Fourth-Wing-Audiobook/B0C9J5YQZP">Listen</button>
                     </div>
                 </div>
             </div>
             
             <!-- Audiobook 5 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden audiobook-card">
-                <img src="images/audiobook5.jpg" alt="Educated" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1693925132i/195275772.jpg" alt="Iron Flame" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Educated</h3>
-                    <p class="text-gray-500 mb-2">by Tara Westover, narrated by Julia Whelan</p>
-                    <p class="text-gray-700 mb-4">A memoir about a young girl who, kept out of school, leaves her survivalist family and goes on to earn a PhD from Cambridge University.</p>
+                    <h3 class="text-2xl font-bold mb-2">Iron Flame</h3>
+                    <p class="text-gray-500 mb-2">by Rebecca Yarros, narrated by Rebecca Soler</p>
+                    <p class="text-gray-700 mb-4">The sequel to Fourth Wing continues Violet's journey at Basgiath War College, where she must navigate new challenges, deeper secrets, and dangerous alliances.</p>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <span class="text-gray-600 mr-2">12h 10m</span>
+                            <span class="text-gray-600 mr-2">22h 15m</span>
                             <div class="h-2 w-24 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="h-full bg-indigo-600 rounded-full" style="width: 100%"></div>
+                                <div class="h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
                             </div>
                         </div>
-                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Listen</button>
+                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg" data-audio="https://www.audible.com/pd/Iron-Flame-Audiobook/B0C9J5YQZP">Listen</button>
                     </div>
                 </div>
             </div>
             
             <!-- Audiobook 6 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden audiobook-card">
-                <img src="images/audiobook6.jpg" alt="The Sandman" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705614870i/196833291.jpg" alt="When the Moon Hatched" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Sandman</h3>
-                    <p class="text-gray-500 mb-2">by Neil Gaiman, narrated by Full Cast</p>
-                    <p class="text-gray-700 mb-4">An immersive audio adaptation of the legendary comic book series featuring a full cast of narrators, including James McAvoy as Morpheus.</p>
+                    <h3 class="text-2xl font-bold mb-2">When the Moon Hatched</h3>
+                    <p class="text-gray-500 mb-2">by Sarah A. Parker, narrated by Elizabeth Evans</p>
+                    <p class="text-gray-700 mb-4">A fast-paced fantasy romance following Raeve, a rebel assassin, and Kaan Vaegor, a crown-wearing hunter, as they uncover ancient truths in a world where dragons became moons.</p>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <span class="text-gray-600 mr-2">10h 54m</span>
+                            <span class="text-gray-600 mr-2">18h 30m</span>
                             <div class="h-2 w-24 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="h-full bg-indigo-600 rounded-full" style="width: 50%"></div>
+                                <div class="h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
                             </div>
                         </div>
-                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Listen</button>
+                        <button class="listen-button bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg" data-audio="https://www.audible.com/pd/When-the-Moon-Hatched-Audiobook/B0C9J5YQZP">Listen</button>
                     </div>
                 </div>
             </div>
@@ -174,7 +174,7 @@ menu: nav/home.html
         <!-- Audio Player -->
         <div class="p-6 bg-gray-100">
             <div class="flex items-center justify-center mb-6">
-                <img id="player-cover" src="images/audiobook1.jpg" alt="Book Cover" class="h-64 w-auto rounded-lg shadow-lg">
+                <img id="player-cover" src="" alt="Book Cover" class="h-64 w-auto rounded-lg shadow-lg">
             </div>
             
             <div class="audio-controls flex flex-col items-center">
@@ -182,9 +182,9 @@ menu: nav/home.html
                 <div class="w-full flex items-center mb-4">
                     <span id="current-time" class="text-sm mr-2">0:00</span>
                     <div class="relative flex-1 h-2 bg-gray-300 rounded-full overflow-hidden">
-                        <div id="progress-bar" class="absolute h-full bg-indigo-600 rounded-full" style="width: 30%"></div>
+                        <div id="progress-bar" class="absolute h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
                     </div>
-                    <span id="duration" class="text-sm ml-2">13:24:00</span>
+                    <span id="duration" class="text-sm ml-2">0:00</span>
                 </div>
                 
                 <!-- Player Controls -->
@@ -231,6 +231,11 @@ menu: nav/home.html
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Audio Player Setup
+        const audioPlayer = new Audio();
+        let isPlaying = false;
+        let currentBook = null;
+        
         // Player Modal Functionality
         const listenButtons = document.querySelectorAll('.listen-button');
         const playerModal = document.getElementById('player-modal');
@@ -243,20 +248,22 @@ menu: nav/home.html
                 const audioCard = this.closest('.audiobook-card');
                 const title = audioCard.querySelector('h3').textContent;
                 const coverSrc = audioCard.querySelector('img').src;
+                const audioSrc = this.dataset.audio;
                 
                 playerTitle.textContent = title;
                 playerCover.src = coverSrc;
+                audioPlayer.src = audioSrc;
+                currentBook = audioCard;
+                
                 playerModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                document.body.style.overflow = 'hidden';
+                
+                // Reset progress
+                document.getElementById('progress-bar').style.width = '0%';
+                document.getElementById('current-time').textContent = '0:00';
+                isPlaying = false;
+                updatePlayPauseButton();
             });
-        });
-        
-        closePlayer.addEventListener('click', function() {
-            playerModal.classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-            // Pause audio playback
-            isPlaying = false;
-            updatePlayPauseButton();
         });
         
         // Playback controls
@@ -267,87 +274,79 @@ menu: nav/home.html
         const fastForwardButton = document.getElementById('fast-forward');
         const progressBar = document.getElementById('progress-bar');
         const currentTimeEl = document.getElementById('current-time');
-        const playbackSpeedSelect = document.getElementById('playback-speed');
-        
-        let isPlaying = false;
-        let progressInterval;
-        let currentProgress = 30; // Starting at 30% for demo
+        const durationEl = document.getElementById('duration');
         
         function updatePlayPauseButton() {
             if (isPlaying) {
                 playIcon.classList.add('hidden');
                 pauseIcon.classList.remove('hidden');
-                startProgressSimulation();
             } else {
                 playIcon.classList.remove('hidden');
                 pauseIcon.classList.add('hidden');
-                stopProgressSimulation();
             }
         }
         
-        function startProgressSimulation() {
-            // Simulate progress
-            progressInterval = setInterval(() => {
-                currentProgress += 0.1;
-                if (currentProgress > 100) currentProgress = 0;
-                progressBar.style.width = `${currentProgress}%`;
-                
-                // Update time display
-                const totalSeconds = 13 * 60 * 60 + 24 * 60; // 13h 24m in seconds
-                const currentSeconds = Math.floor(totalSeconds * (currentProgress / 100));
-                const hours = Math.floor(currentSeconds / 3600);
-                const minutes = Math.floor((currentSeconds % 3600) / 60);
-                const seconds = currentSeconds % 60;
-                
-                currentTimeEl.textContent = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                
-                // Highlight transcript paragraph based on progress
-                highlightCurrentParagraph(currentProgress);
-            }, 100);
+        function formatTime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const remainingSeconds = Math.floor(seconds % 60);
+            return `${hours}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
         }
         
-        function stopProgressSimulation() {
-            clearInterval(progressInterval);
-        }
+        audioPlayer.addEventListener('loadedmetadata', function() {
+            durationEl.textContent = formatTime(audioPlayer.duration);
+        });
         
-        function highlightCurrentParagraph(progress) {
-            if (!document.getElementById('highlight-narration').classList.contains('active')) return;
-            
-            const paragraphs = document.querySelectorAll('#transcript-content p');
-            const paragraphCount = paragraphs.length;
-            const paragraphIndex = Math.floor((progress / 100) * paragraphCount);
-            
-            paragraphs.forEach(p => p.classList.remove('bg-yellow-100'));
-            
-            if (paragraphIndex < paragraphCount) {
-                paragraphs[paragraphIndex].classList.add('bg-yellow-100');
-                // Scroll to the highlighted paragraph
-                paragraphs[paragraphIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
+        audioPlayer.addEventListener('timeupdate', function() {
+            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressBar.style.width = `${progress}%`;
+            currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+        });
         
         playPauseButton.addEventListener('click', function() {
+            if (isPlaying) {
+                audioPlayer.pause();
+            } else {
+                audioPlayer.play();
+            }
             isPlaying = !isPlaying;
             updatePlayPauseButton();
         });
         
         rewindButton.addEventListener('click', function() {
-            // Rewind by 30 seconds
-            currentProgress = Math.max(0, currentProgress - 0.5);
-            progressBar.style.width = `${currentProgress}%`;
+            audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 30);
         });
         
         fastForwardButton.addEventListener('click', function() {
-            // Fast forward by 30 seconds
-            currentProgress = Math.min(100, currentProgress + 0.5);
-            progressBar.style.width = `${currentProgress}%`;
+            audioPlayer.currentTime = Math.min(audioPlayer.duration, audioPlayer.currentTime + 30);
         });
         
+        closePlayer.addEventListener('click', function() {
+            playerModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            audioPlayer.pause();
+            isPlaying = false;
+            updatePlayPauseButton();
+        });
+        
+        // Volume Adjustment
+        const volumeButton = document.getElementById('adjust-volume');
+        const volumeLevel = document.getElementById('volume-level');
+        let currentVolume = 100;
+        
+        volumeButton.addEventListener('click', function() {
+            currentVolume = (currentVolume + 25) % 125;
+            if (currentVolume === 0) currentVolume = 100;
+            
+            volumeLevel.textContent = `Volume: ${currentVolume}%`;
+            audioPlayer.volume = currentVolume / 100;
+        });
+        
+        // Playback Speed
+        const playbackSpeedSelect = document.getElementById('playback-speed');
+        
         playbackSpeedSelect.addEventListener('change', function() {
-            // In a real app, this would change the audio playback rate
-            // For this demo, we'll just update the progress simulation speed
-            stopProgressSimulation();
-            if (isPlaying) startProgressSimulation();
+            audioPlayer.playbackRate = parseFloat(this.value);
         });
         
         // Transcript Toggle
@@ -388,21 +387,6 @@ menu: nav/home.html
                 const paragraphs = document.querySelectorAll('#transcript-content p');
                 paragraphs.forEach(p => p.classList.remove('bg-yellow-100'));
             }
-        });
-        
-        // Volume Adjustment
-        const volumeButton = document.getElementById('adjust-volume');
-        const volumeLevel = document.getElementById('volume-level');
-        let currentVolume = 100;
-        
-        volumeButton.addEventListener('click', function() {
-            // Cycle through volume levels: 100% -> 75% -> 50% -> 25% -> 0% -> 100%
-            currentVolume = (currentVolume + 25) % 125;
-            if (currentVolume === 0) currentVolume = 100;
-            
-            volumeLevel.textContent = `Volume: ${currentVolume}%`;
-            
-            // In a real app, this would adjust the audio volume
         });
     });
 </script> 

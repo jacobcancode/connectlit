@@ -54,11 +54,11 @@ menu: nav/home.html
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Book 1 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/nonfiction-book1.jpg" alt="Thinking, Fast and Slow" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705614870i/196833291.jpg" alt="Nexus" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Thinking, Fast and Slow</h3>
-                    <p class="text-gray-500 mb-2">by Daniel Kahneman</p>
-                    <p class="text-gray-700 mb-4">An exploration of the two systems that drive the way we think—one fast, intuitive, and emotional; the other slower, more deliberative, and more logical.</p>
+                    <h3 class="text-2xl font-bold mb-2">Nexus: A Brief History of Information Networks</h3>
+                    <p class="text-gray-500 mb-2">by Yuval Noah Harari</p>
+                    <p class="text-gray-700 mb-4">A groundbreaking exploration of how information networks have shaped human history, from the Stone Age to the AI revolution, examining the complex relationship between information and truth.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -68,11 +68,11 @@ menu: nav/home.html
             
             <!-- Book 2 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/nonfiction-book2.jpg" alt="Sapiens: A Brief History of Humankind" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1702324260i/199267675.jpg" alt="The Anxious Generation" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Sapiens: A Brief History of Humankind</h3>
-                    <p class="text-gray-500 mb-2">by Yuval Noah Harari</p>
-                    <p class="text-gray-700 mb-4">A groundbreaking narrative of humanity's creation and evolution that explores how biology and history have defined us.</p>
+                    <h3 class="text-2xl font-bold mb-2">The Anxious Generation</h3>
+                    <p class="text-gray-500 mb-2">by Jonathan Haidt</p>
+                    <p class="text-gray-700 mb-4">A compelling investigation into how social media and digital technology are reshaping childhood and contributing to the mental health crisis among young people.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -82,11 +82,11 @@ menu: nav/home.html
             
             <!-- Book 3 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/nonfiction-book3.jpg" alt="Atomic Habits" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703554916i/75335801.jpg" alt="The Creative Act" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Atomic Habits</h3>
-                    <p class="text-gray-500 mb-2">by James Clear</p>
-                    <p class="text-gray-700 mb-4">Practical strategies that teach how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.</p>
+                    <h3 class="text-2xl font-bold mb-2">The Creative Act</h3>
+                    <p class="text-gray-500 mb-2">by Rick Rubin</p>
+                    <p class="text-gray-700 mb-4">A transformative guide to creativity from the legendary music producer, offering insights into the creative process and how to unlock your artistic potential.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -96,11 +96,11 @@ menu: nav/home.html
             
             <!-- Book 4 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/nonfiction-book4.jpg" alt="The Power of Habit" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683919831i/61431922.jpg" alt="The Psychology of Money" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">The Power of Habit</h3>
-                    <p class="text-gray-500 mb-2">by Charles Duhigg</p>
-                    <p class="text-gray-700 mb-4">An examination of the science behind habit creation and reformation, explaining why habits exist and how they can be changed.</p>
+                    <h3 class="text-2xl font-bold mb-2">The Psychology of Money</h3>
+                    <p class="text-gray-500 mb-2">by Morgan Housel</p>
+                    <p class="text-gray-700 mb-4">An exploration of the complex relationship between money and human behavior, revealing the surprising ways our emotions and experiences shape our financial decisions.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -110,11 +110,11 @@ menu: nav/home.html
             
             <!-- Book 5 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/nonfiction-book5.jpg" alt="Quiet: The Power of Introverts" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1693925132i/195275772.jpg" alt="Hidden Potential" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Quiet: The Power of Introverts</h3>
-                    <p class="text-gray-500 mb-2">by Susan Cain</p>
-                    <p class="text-gray-700 mb-4">An exploration of how Western society undervalues introverts and how much we lose in doing so, showing the dramatic ways introverts think differently.</p>
+                    <h3 class="text-2xl font-bold mb-2">Hidden Potential</h3>
+                    <p class="text-gray-500 mb-2">by Adam Grant</p>
+                    <p class="text-gray-700 mb-4">A groundbreaking look at how we can unlock our hidden potential and achieve more than we ever thought possible, based on cutting-edge research in psychology and neuroscience.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
@@ -124,11 +124,11 @@ menu: nav/home.html
             
             <!-- Book 6 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden book-card">
-                <img src="images/nonfiction-book6.jpg" alt="A Brief History of Time" class="w-full h-64 object-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705614870i/196833291.jpg" alt="The Wager" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">A Brief History of Time</h3>
-                    <p class="text-gray-500 mb-2">by Stephen Hawking</p>
-                    <p class="text-gray-700 mb-4">A landmark volume in science writing that explores fundamental questions about the universe and our existence, from the Big Bang to black holes.</p>
+                    <h3 class="text-2xl font-bold mb-2">The Wager</h3>
+                    <p class="text-gray-500 mb-2">by David Grann</p>
+                    <p class="text-gray-700 mb-4">A thrilling true story of shipwreck, survival, and justice, following the crew of the HMS Wager as they face unimaginable challenges in the 18th century.</p>
                     <div class="flex justify-between">
                         <button class="read-sample bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Read Sample</button>
                         <button class="add-to-list bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">+ Reading List</button>
