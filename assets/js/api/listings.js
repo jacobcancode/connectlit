@@ -5,12 +5,12 @@ export async function getListings() {
     try {
         const response = await fetch(endpoint, fetchOptions)
         if (!response.ok) {
-            throw new error('Failed to fetch listings:' + response.status)
+            throw new Error('Failed to fetch listings:' + response.status)
         }
         const listings = await response.json()
         return listings
-    } catch {
-        console.error("Error fetching listings"+ error.message)
+    } catch (error) {
+        console.error("Error fetching listings:", error.message)
         return null
     }
 }

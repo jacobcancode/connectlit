@@ -77,6 +77,7 @@ export function deleteData(options)  {
     };
 
     // Clear the message area
+    document.getElementById(options.message).textContent = "";
 
     // Send DELETE request
     fetch(options.URL, requestOptions)
@@ -85,6 +86,7 @@ export function deleteData(options)  {
             if (!response.ok) {
                 const errorMsg = 'Error: ' + response.status;
                 console.log(errorMsg);
+                document.getElementById(options.message).textContent = errorMsg;
                 return;
             }
             // Success!!!
@@ -94,7 +96,7 @@ export function deleteData(options)  {
         .catch(error => {
             // Handle network errors
             console.log('Possible CORS or Service Down error: ' + error);
-            
+            document.getElementById(options.message).textContent = 'Possible CORS or service down error: ' + error;
         });
 
     }

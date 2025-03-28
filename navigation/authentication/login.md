@@ -12,7 +12,7 @@ menu: nav/home.html
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form class="space-y-6" id="pythonForm" onsubmit="pythonLogin(); return false;">
+    <form class="space-y-6" id="loginForm" onsubmit="return handleLogin()">
       <div>
         <label for="username" class="block text-sm/6 font-medium text-gray-900">Username</label>
         <div class="mt-2">
@@ -21,7 +21,7 @@ menu: nav/home.html
       </div>
       <div>
         <div class="flex items-center justify-between">
-          <label type="password" name="password" class="block text-sm/6 font-medium text-gray-900">Password</label>
+          <label for="password" class="block text-sm/6 font-medium text-gray-900">Password</label>
         </div>
         <div class="mt-2">
           <input type="password" name="password" id="password" autocomplete="current-password" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
@@ -30,102 +30,38 @@ menu: nav/home.html
       <div>
         <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Sign in</button>
       </div>
-      <p id="message" class="text-indigo-500"></p>
+      <p id="message" class="text-red-500 text-center"></p>
+      <div class="text-center mt-4">
+        <p class="text-sm text-gray-600">Don't have an account? <a href="{{site.baseurl}}/signup" class="text-indigo-600 hover:text-indigo-500">Sign up</a></p>
+      </div>
     </form>
   </div>
 </div>
 
 <script type="module">
-    import { login, pythonURI, fetchOptions } from '{{site.baseurl}}/assets/js/api/config.js';
+    import { mockLogin, isAuthenticated } from '{{site.baseurl}}/assets/js/api/mockAuth.js';
 
-    // Function to handle Python login
-    window.pythonLogin = function() {
-        const options = {
-            URL: `${pythonURI}/api/authenticate`,
-            callback: pythonDatabase,
-            message: "message",
-            method: "POST",
-            cache: "no-cache",
-            body: {
-                uid: document.getElementById("username").value,
-                password: document.getElementById("password").value,
-            }
-        };
-        login(options);
-    }
-
-    // Function to handle signup
-    window.signup = function() {
-        const signupButton = document.querySelector(".signup-card button");
-
-        // Disable the button and change its color
-        signupButton.disabled = true;
-        signupButton.style.backgroundColor = '#d3d3d3'; // Light gray to indicate disabled state
-
-        const signupOptions = {
-            URL: `${pythonURI}/api/user`,
-            method: "POST",
-            cache: "no-cache",
-            body: {
-                name: document.getElementById("name").value,
-                username: document.getElementById("signupUsername").value,
-                password: document.getElementById("signupPassword").value,
-            }
-        };
-
-        fetch(signupOptions.URL, {
-            method: signupOptions.method,
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(signupOptions.body)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Signup failed: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            document.getElementById("signupMessage").textContent = "Signup successful!";
-            // Optionally redirect to login page or handle as needed
-            // window.location.href = '{{site.baseurl}}/profile';
-        })
-        .catch(error => {
-            console.error("Signup Error:", error);
-            document.getElementById("signupMessage").textContent = `Signup Error: ${error.message}`;
-            // Re-enable the button if there is an error
-            signupButton.disabled = false;
-            signupButton.style.backgroundColor = ''; // Reset to default color
-        });
-    }
-
-    // Function to fetch and display Python data
-    function pythonDatabase() {
-        const URL = `${pythonURI}/api/user`;
-
-        fetch(URL, fetchOptions)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Flask server response: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                window.location.href = '{{site.baseurl}}/profile';
-            })
-            .catch(error => {
-                console.error("Python Database Error:", error);
-                const errorMsg = `Python Database Error: ${error.message}`;
-            });
-    }
-
-    // Check for cookies and call relevant database functions on page load
-    window.onload = function() {
-        // Check if user is authenticated by checking cookies or local storage
-        const isAuthenticated = document.cookie.includes('auth_token'); // Example check
-        if (isAuthenticated) {
-            pythonDatabase();
+    // Check if user is already logged in
+    document.addEventListener('DOMContentLoaded', () => {
+        if (isAuthenticated()) {
+            window.location.href = '{{site.baseurl}}/';
         }
+    });
+
+    // Function to handle login
+    window.handleLogin = async function() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const messageElement = document.getElementById("message");
+
+        try {
+            await mockLogin(username, password);
+            // Redirect to home page after successful login
+            window.location.href = '{{site.baseurl}}/';
+        } catch (error) {
+            messageElement.textContent = error.message || 'Invalid username or password';
+        }
+
+        return false; // Prevent default form submission behavior
     };
 </script>

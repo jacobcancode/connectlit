@@ -1,5 +1,6 @@
 <header
     class="z-10 sticky justify-items-center w-full top-0 grid grid-cols-5 bg-white justify-center p-4 drop-shadow"
+    id="top-header"
 >
     <div class="col-span-2 flex gap-x-12 mt-3 justify-self-end" id="link-bar-1">
         <a
@@ -68,74 +69,32 @@
 
         <a
             id="signup-login"
-            href="{{site.baseurl}}/noauth"
+            href="{{site.baseurl}}/login"
             class="hover:drop-shadow-xl z-10 right-6 absolute text-indigo-500 font-extrabold tracking-tight"
             >Sign Up | Login</a
         >
         <a
             hidden
-            id="profile"
+            id="profile-top"
             href="{{site.baseurl}}/profile"
             class="hover:drop-shadow-xl z-10 right-6 absolute text-indigo-500 font-extrabold tracking-tight"
             >Profile</a
         >
+        <div id="profile-dropdown-top" class="hidden absolute right-6 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+            <a href="{{site.baseurl}}/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+            <a href="#" onclick="handleLogout()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
+        </div>
     </div>
 </header>
 
-<script type="module">
-    import {
-        pythonURI,
-        fetchOptions,
-    } from "{{site.baseurl}}/assets/js/api/config.js";
-
-    const loginLink = document.getElementById("signup-login");
-    const profileLink = document.getElementById("profile");
-
-    document.addEventListener("DOMContentLoaded", () => {
-        getCredentials() // Call the function to get credentials
-            .then((data) => {
-                if (data) {
-                    //IF DATA THEN THE USER IS AUTHENTICATED/LOGGED IN
-                    console.log("LOGGED IN");
-                    loginLink.hidden = true;
-                    profileLink.hidden = false;
-                } else {
-                    //USER IS NOT AUTHENTICATED/LOGGED IN
-                }
-            })
-            .catch((err) => {
-                // General error handler
-                console.error("Error fetching credentials: ", err);
-                // Handle any errors that occurred during getCredentials
-            });
-    });
-    function getCredentials() {
-        const URL = pythonURI + "/api/user";
-        return fetch(URL, fetchOptions)
-            .then((response) => {
-                // API response handler
-                if (response.status !== 200) {
-                    console.error("HTTP status code: " + response.status);
-                    return null; // prepares to stop the chain by returning null.
-                }
-                return response.json(); // plans to continue the chain with the data.
-            })
-            .then((data) => {
-                // Data handler from the previous promise
-                if (data === null) return null; // stops the chain, returns null.
-                return data; // returns data to caller
-            })
-            .catch((err) => {
-                // General error handler
-                console.error("Fetch error: ", err);
-                return null;
-            });
+<style>
+    .header-hidden {
+        display: none !important;
     }
-</script>
+</style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="/">BookConnect</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -144,11 +103,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{site.baseurl}}/">Home</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{site.baseurl}}/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{site.baseurl}}/login" id="login-nav">Sign Up | Login</a>
+                </li>
+                <!-- Protected Features -->
+                <li class="nav-item dropdown protected-feature" style="display: none;">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Books
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{site.baseurl}}/reading">Reading</a></li>
                         <li><a class="dropdown-item" href="{{site.baseurl}}/fiction">Fiction</a></li>
                         <li><a class="dropdown-item" href="{{site.baseurl}}/non-fiction">Non-Fiction</a></li>
                         <li><a class="dropdown-item" href="{{site.baseurl}}/audiobooks">Audiobooks</a></li>
@@ -156,10 +123,10 @@
                         <li><a class="dropdown-item" href="{{site.baseurl}}/recommended">Recommended Reads</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item protected-feature" style="display: none;">
                     <a class="nav-link" href="{{site.baseurl}}/discussions">Book Discussions</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown protected-feature" style="display: none;">
                     <a class="nav-link dropdown-toggle" href="#" id="assistiveDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Assistive Tools
                     </a>
@@ -169,14 +136,97 @@
                         <li><a class="dropdown-item" href="{{site.baseurl}}/dyslexia-support">Dyslexia Support</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{site.baseurl}}/about">About Us</a>
-                </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search books..." aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
+            <div class="d-flex align-items-center">
+                <form class="d-flex protected-feature me-3" style="display: none;">
+                    <input class="form-control me-2" type="search" placeholder="Search books..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="protected-feature" style="display: none;">
+                    <a id="profile" href="{{site.baseurl}}/profile" class="nav-link text-light">Profile</a>
+                    <div id="profile-dropdown" class="dropdown-menu dropdown-menu-end">
+                        <a href="{{site.baseurl}}/profile" class="dropdown-item">Profile</a>
+                        <a href="#" onclick="handleLogout()" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
+
+<script type="module">
+    import { isAuthenticated, getCurrentUser, mockLogout } from "{{site.baseurl}}/assets/js/api/mockAuth.js";
+
+    const loginNav = document.getElementById("login-nav");
+    const profileLinkTop = document.getElementById("profile-top");
+    const profileDropdownTop = document.getElementById("profile-dropdown-top");
+    const protectedFeatures = document.querySelectorAll(".protected-feature");
+    const signupLogin = document.getElementById("signup-login");
+    const purpleNavbar = document.querySelector(".navbar-dark.bg-dark");
+
+    // Function to check authentication status and update UI
+    async function checkAuthAndUpdateUI() {
+        const isLoggedIn = await isAuthenticated();
+        if (isLoggedIn) {
+            const user = getCurrentUser();
+            console.log("Logged in as:", user.username);
+            loginNav.style.display = "none";
+            profileLinkTop.style.display = "block";
+            profileLinkTop.textContent = user.name || user.username;
+            protectedFeatures.forEach(feature => feature.style.display = "block");
+            // Hide the purple navigation bar for logged-in users
+            if (purpleNavbar) {
+                purpleNavbar.style.display = "none";
+            }
+            if (signupLogin) {
+                signupLogin.style.display = "none";
+            }
+            // Show profile dropdown
+            if (profileDropdownTop) {
+                profileDropdownTop.classList.remove("hidden");
+            }
+        } else {
+            console.log("Not logged in");
+            loginNav.style.display = "block";
+            profileLinkTop.style.display = "none";
+            profileDropdownTop.classList.add("hidden");
+            protectedFeatures.forEach(feature => feature.style.display = "none");
+            // Show the purple navigation bar for non-logged-in users
+            if (purpleNavbar) {
+                purpleNavbar.style.display = "block";
+            }
+            if (signupLogin) {
+                signupLogin.style.display = "block";
+            }
+        }
+    }
+
+    // Initialize UI when DOM is loaded
+    document.addEventListener("DOMContentLoaded", () => {
+        checkAuthAndUpdateUI();
+        
+        // Add click handler for profile link
+        if (profileLinkTop) {
+            profileLinkTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                profileDropdownTop.classList.toggle('hidden');
+            });
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (profileLinkTop && profileDropdownTop) {
+            if (!profileLinkTop.contains(e.target) && !profileDropdownTop.contains(e.target)) {
+                profileDropdownTop.classList.add('hidden');
+            }
+        }
+    });
+
+    // Add logout functionality
+    window.handleLogout = function() {
+        mockLogout();
+        checkAuthAndUpdateUI();
+        window.location.href = "{{site.baseurl}}/";
+    };
+</script>

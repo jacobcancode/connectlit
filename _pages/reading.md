@@ -4,6 +4,9 @@ title: Reading
 permalink: /reading
 ---
 
+<!-- Add auth check script -->
+<script src="{{site.baseurl}}/assets/js/auth.js"></script>
+
 # Reading
 
 <div class="container">
@@ -118,7 +121,10 @@ let currentWord = null;
 
 // Load books when page loads
 document.addEventListener('DOMContentLoaded', () => {
-  loadBooks();
+  // Only load books if user is authenticated
+  if (checkAuth()) {
+    loadBooks();
+  }
 });
 
 // Load all available books

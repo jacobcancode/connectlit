@@ -270,7 +270,10 @@ search_exclude: true
             });
             
         } catch (error) {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching posts:', error);
+            const detailsDiv = document.getElementById('details');
+            detailsDiv.innerHTML = `<div class="error-message">Error loading posts: ${error.message}</div>`;
+            document.getElementById('count').innerHTML = `<h2>Count 0</h2>`;
         }
     }
 

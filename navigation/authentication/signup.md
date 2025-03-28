@@ -46,7 +46,7 @@ menu: nav/home.html
 </div>
 
 <script type="module">
-    import { login, pythonURI, fetchOptions } from '{{site.baseurl}}/assets/js/api/config.js';
+    import { mockSignup } from '{{site.baseurl}}/assets/js/api/mockAuth.js';
 
     // Function to handle signup
     window.handleSignup = function() {
@@ -59,38 +59,17 @@ menu: nav/home.html
             return false; // Prevent form submission
         }
 
-        const signupOptions = {
-            URL: `${pythonURI}/api/user`,
-            method: "POST",
-            cache: "no-cache",
-            body: {
-                name: document.getElementById("name").value,
-                uid: document.getElementById("username").value,
-                password: password,
-            }
-        };
-
-        fetch(signupOptions.URL, {
-            method: signupOptions.method,
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(signupOptions.body)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Signup failed: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
+        try {
+            mockSignup(
+                document.getElementById("name").value,
+                document.getElementById("username").value,
+                password
+            );
             document.getElementById("message").textContent = "Signup successful!";
             window.location.href = '{{site.baseurl}}/login';
-        })
-        .catch(error => {
-            console.error("Signup Error:", error);
-            document.getElementById("message").textContent = `Signup Error: ${error.message}`;
-        });
+        } catch (error) {
+            document.getElementById("message").textContent = error.message;
+        }
 
         return false; // Prevent default form submission behavior
     };
