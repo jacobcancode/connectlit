@@ -6,13 +6,14 @@ search_exclude: true
 menu: nav/home.html
 ---
 
-<!-- Add auth check script -->
-<script src="{{site.baseurl}}/assets/js/auth.js"></script>
+<meta http-equiv="refresh" content="0;url=/connectlit/login" id="auth-redirect">
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Get user data from localStorage
-    const user = JSON.parse(localStorage.getItem('currentUser'));
+// Check if user is authenticated
+const user = JSON.parse(localStorage.getItem('currentUser'));
+if (user) {
+    // Remove the redirect meta tag if user is authenticated
+    document.getElementById('auth-redirect').remove();
     
     // Update profile information
     document.getElementById('profile-name').textContent = user.name;
@@ -87,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         wantToRead.appendChild(wantItem);
     });
-});
+}
 </script>
 
 <div class="container mx-auto px-4 py-8">

@@ -18,7 +18,10 @@ function checkAuth() {
 // Run auth check when page loads
 document.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname;
-    if (!currentPath.includes('/login') && !currentPath.includes('/signup')) {
+    // Skip auth check for login, signup, and profile pages
+    if (!currentPath.includes('/login') && 
+        !currentPath.includes('/signup') && 
+        !currentPath.includes('/profile')) {
         checkAuth();
     }
 }); 
